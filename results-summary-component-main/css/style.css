@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Lato:wght@300&family=Outfit:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  background: var(--Pale-blue);
+}
+@media screen and (max-width: 600px) {
+  body {
+    background: var(--White);
+  }
+}
+
+.cardcontainer {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+:root {
+  /*Pirmary bg colors*/
+  --Light-red: hsla(0, 100%, 67%,.2);
+  --Orangey-yellow: hsla(39, 100%, 56%,.2);
+  --Green-teal: hsla(166, 100%, 37%,.2);
+  --Cobalt-blue: hsla(234, 85%, 45%,.2);
+  /*gradients*/
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+  /*Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-grayblue: hsl(224, 30%, 27%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 1px);
+}
+
+.content {
+  display: flex;
+  box-shadow: 3px 7px 17px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    box-shadow: none;
+    max-width: 450px;
+    border-radius: none;
+  }
+}
+
+.result {
+  flex: 0 1 50%;
+}
+.result__column {
+  background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+  padding: 1.2rem 2rem;
+  height: 100%;
+  border-radius: 2rem;
+}
+@media screen and (max-width: 600px) {
+  .result__column {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+.result__body {
+  margin: 0 auto;
+  text-align: center;
+}
+.result__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--White);
+}
+.result__title {
+  color: var(--Light-lavender);
+}
+.result__circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: linear-gradient(to top, var(--Persian-blue-circle), var(--Violet-blue-circle));
+  margin: 10px 0 20px 0;
+}
+.result__circle h1 {
+  font-size: 4rem;
+}
+.result__circle p {
+  color: var(--Light-lavender);
+}
+.result__subsubtitle {
+  font-size: 1.2rem;
+}
+.result__text {
+  margin: 10px 5px 15px 5px;
+  font-size: 18px;
+  line-height: 1.6rem;
+  color: var(--Light-lavender);
+}
+
+.title {
+  font-weight: 800;
+  padding: 1.2rem;
+}
+@media screen and (max-width: 600px) {
+  .title {
+    padding: 0.8rem;
+  }
+}
+
+.summary {
+  flex: 0 1 50%;
+}
+.summary__column {
+  display: flex;
+  flex: 0 1 50%;
+  flex-direction: column;
+  margin: 0 0 0 30px;
+}
+.summary__title {
+  padding: 40px 0 15px 0;
+}
+@media screen and (max-width: 600px) {
+  .summary__title {
+    padding: 20px 0 10px 0;
+  }
+}
+
+.summary-rows {
+  display: flex;
+}
+.summary-rows__row {
+  border-radius: 10px;
+  margin: 15px 25px 15px 0px;
+}
+
+.row__item {
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.row__img {
+  padding-right: 15px;
+}
+.row__about {
+  display: flex;
+}
+.row__score {
+  font-weight: 700;
+}
+.row__1 {
+  background: var(--Light-red);
+}
+.row__2 {
+  background: var(--Orangey-yellow);
+}
+.row__3 {
+  background: var(--Green-teal);
+}
+.row__4 {
+  background: var(--Cobalt-blue);
+}
+.row__reaction {
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+}
+.row__memory {
+  color: hsl(39, 100%, 56%);
+  font-weight: 700;
+}
+.row__verbal {
+  color: hsl(166, 100%, 37%);
+  font-weight: 700;
+}
+.row__visual {
+  color: hsl(234, 85%, 45%);
+  font-weight: 700;
+}
+
+.score__denominator {
+  font-weight: 500;
+}
+
+.btn {
+  font-family: inherit;
+  margin: 15px 25px 15px 0px;
+  border-radius: 20px;
+  height: 45px;
+  color: var(--White);
+  font-weight: 700;
+  background: var(--Dark-grayblue);
+}
+.btn:hover {
+  background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+  cursor: pointer;
+}
+
+.attribution {
+  margin: 20px 0 0 0;
+}/*# sourceMappingURL=style.css.map */
